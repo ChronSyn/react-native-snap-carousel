@@ -758,14 +758,14 @@ export default class Carousel extends Component {
             animated
         };
 
-        // Fixes the infinite scroll not working properly on some android devices
+        // Fixes the infinite scroll not working properly on some devices
         setTimeout(() => {
             if (this._needsScrollView()) {
                 wrappedRef.scrollTo(options);
             } else {
                 wrappedRef.scrollToOffset(options);
             }
-        }, (!animated && this._animated) ? 200 : 0);
+        }, 0);
 
         this._animated = animated;
     }
