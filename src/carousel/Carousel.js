@@ -765,7 +765,7 @@ export default class Carousel extends Component {
             } else {
                 wrappedRef.scrollToOffset(options);
             }
-        }, 0);
+        }, (!animated && this._animated) ? 200 : 0);
 
         this._animated = animated;
     }
